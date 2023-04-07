@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://nicolujan1610.github.io/todo-list-app",
+  "homepage": "http://nicolujan1610.github.io/todo-list-app/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
