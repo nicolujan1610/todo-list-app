@@ -1,0 +1,76 @@
+.todo-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: 60px;
+  padding: .5rem;
+  gap: 12px;
+
+  font-size: 1.5rem;
+
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+  word-break: keep-all;
+  white-space: pre-wrap;
+}
+
+.todo-open{
+  border: 1px solid #eee;
+  border-top: 0;
+  padding: 12px 1rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.todo-name-container{
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+}
+
+.todo-name-container button{
+  float: left;
+  margin: 4px;
+  padding: 2px;
+}
+
+.todo-item input{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.todo-eliminate{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.todo-eliminate button{
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+
+  .todo-eliminate {
+    flex-direction: column-reverse;
+  }
+
+  .todo-eliminate input{
+    width: 18px;
+    height: 18px;
+  }
+
+  .todo-eliminate button{
+    width: 30px;
+    height: 30px;
+  }
+
+  .todo-name-container button{
+    font-size: 10px;
+    padding: 4px;
+  }
+}
