@@ -8,6 +8,7 @@ import { useGetTodosFromLS } from './hooks/useGetTodosFromLS';
 function App() {
   const {todos, setTodos} = useGetTodosFromLS();
   const [showModal, setShowModal] = useState(false);
+  const [savedTodos, setSavedTodos] = useState(false);
 
   const handleTodoAdded = (e) => {
     e.preventDefault();
@@ -22,10 +23,17 @@ function App() {
     setShowModal(false);
   }
 
-  const handleSaveTodos = () => {
+  const handleSaveTodos = async () => {
     localStorage.setItem('todos', JSON.stringify(todos));
+    setSavedTodos(true);
+    setTimeout(() => {
+      setSavedTodos(false);
+    }, 4000)
+
   }
-  
+
+
+
   return (
     <div className="App">
       <header className='app-header'>
@@ -66,6 +74,13 @@ function App() {
           handleTodoAdded={handleTodoAdded}
         />
       }
+
+
+      <div className={savedTodos ? 'alert-saved-todos alert-saved-todos-show' : 'alert-saved-todos'}>
+        <p>Tu lista ha sido guardada ({todos.length} ToDos)</p>
+      </div>
+
+
     </div>
   )
 }

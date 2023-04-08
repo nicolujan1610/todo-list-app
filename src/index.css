@@ -46,13 +46,12 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   background-color: #1a1a1a;
-  font-weight: 500;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: #645cff;
 }
 
 
