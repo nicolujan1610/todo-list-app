@@ -17,7 +17,7 @@ export function AddTodoModal({setShowModal, handleTodoAdded}) {
         <form className='add-todo-form' onSubmit={handleTodoAdded}>
           <div>
             <label htmlFor="add--todo-name">Tarea:</label>
-            <input type="text" id="todo-name" name='todoName' required/>
+            <input type="text" id="todo-name" name='todoName' required autoComplete='off' />
           </div>
           <div>
             <label htmlFor="add--todo-description" className='add-todo-description'>Descripción (opcional):</label>
